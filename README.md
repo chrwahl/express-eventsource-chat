@@ -25,4 +25,5 @@ event endpoint and messages posted are stored in arrays.
 
 - [Installing Express](https://expressjs.com/en/starter/installing.html)
 - [Express application generator](https://expressjs.com/en/starter/generator.html)
+- [Using Fetch - Web APIs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [EventSource - Web APIs](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
