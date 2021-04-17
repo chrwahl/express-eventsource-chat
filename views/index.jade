@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  form(name='send')
+    label Name:&#32;
+      input(type='text', name='name')
+    label &#32;says:&#32;
+      input(type='text', name='message')
+      = " "
+    button Send
+  div(id='messagestream')
