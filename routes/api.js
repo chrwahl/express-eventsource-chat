@@ -36,12 +36,12 @@ const event_content = (data, eventtype, id) => {
 	return str;	
 };
 
-// the server side event endpoint
+// the server-send event endpoint
 router.get('/events', function(req, res, next) {
   res.set({
     'Content-Type': 'text/event-stream',
-  	'Connection': 'keep-alive',
-  	'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive',
+    'Cache-Control': 'no-cache',
     'Transfer-Encoding': 'identity'});
 
   // write an initial event as a 'notice'
@@ -62,8 +62,8 @@ router.get('/events', function(req, res, next) {
 
   // remove the client when the EventSource sends 'close'.
   req.on('close', () => {
-  	console.log(`[${client_id}]: Connection closed`);
-  	clients = clients.filter(client => client.id !== client_id);
+    console.log(`[${client_id}]: Connection closed`);
+    clients = clients.filter(client => client.id !== client_id);
   });
 });
 
